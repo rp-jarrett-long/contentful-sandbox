@@ -1,0 +1,45 @@
+{
+  "name": "rp-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run build:script && npm run dev:next",
+    "dev:next": "next dev",
+    "build": "npm run build:script && npm run build:next",
+    "build:next": "next build",
+    "build:script": "vite build",
+    "start": "next start",
+    "lint": "next lint",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts",
+    "export-model": "node scripts/export-model.mjs",
+    "generate-types": "cf-content-types-generator contentful/exports/model.json -o src/types/contentful --v10 --typeguard",
+    "install-model": "npm run export-model && npm run generate-types"
+  },
+  "dependencies": {
+    "@contentful/live-preview": "^4.6.20",
+    "@contentful/rich-text-from-markdown": "^16.0.0",
+    "@contentful/rich-text-react-renderer": "^16.0.1",
+    "cf-content-types-generator": "^2.16.0",
+    "contentful": "^11.5.24",
+    "contentful-management": "^11.52.2",
+    "dotenv": "^16.5.0",
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "contentful-typescript-codegen": "^3.4.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "vite": "^6.3.5"
+  }
+}
