@@ -36,13 +36,13 @@ export function Image<T extends Entry>(props: ImageProps<T>) {
     ...rest
   };
 
-  <NextImage
-    src={`https:${field?.fields?.file?.url}`}
-    alt={(field.fields?.title as string) || 'Blog Hero Image'}
-    width={field.fields?.file?.details.image?.width}
-    height={field.fields?.file?.details.image?.height}
-    {...restProps}
-  />;
-
-  return <div>Image</div>;
+  return (
+    <NextImage
+      src={`https:${field?.fields?.file?.url}`}
+      alt={(field.fields?.title as string) || 'Blog Hero Image'}
+      width={field.fields?.file?.details.image?.width}
+      height={field.fields?.file?.details.image?.height}
+      {...restProps}
+    />
+  );
 }
