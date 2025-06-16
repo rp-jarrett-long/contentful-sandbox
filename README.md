@@ -1,3 +1,11 @@
+This is a Contentful sandbox project that has some goodies which include:
+- Full Next.js App Router / React Server Component support
+- Contentful Live Preview & Inspector Mode support
+- Typescript codegen based on Contentful content model exports
+- Atomic React components for Text, RichText, and Image.
+
+The rest below is boilerplate Nextjs readme stuff.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
